@@ -14,7 +14,9 @@ import ReactDOM from 'react-dom/client';
 // console.log(heading);
 
 // React component
-const Heading= ()=>(<div><h1>heloooooo</h1></div>)
+const Heading2 = ()=>(<div><h2>Shorter Heading</h2></div>)
+/**component inside another component => @component_composition */ 
+const Heading= ()=>(<div><h1>Bigger Heading</h1><Heading2/></div>)
 
 // React.createElement => Object=>  HTML(DOM)
 const parent = React.createElement('h1',{},'Hello World using React');

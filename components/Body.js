@@ -1,23 +1,8 @@
-import RestaurantCard from './RestaurantCard'
+import RestaurantCard from './RestaurantCard';
+// named import
+import {resList} from '../utils/mockData';
 const Body = () => {
-  const resList = [
-    {
-      id: 1,
-      resName: "Meghana Foods"
-    },
-    {
-      id: 2,
-      resName: "KFC"
-    },
-    {
-      id: 3,
-      resName: "McDonald's"
-    },
-    {
-      id: 4,
-      resName: "Dominos"
-    }
-  ];
+  // const data = fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=30.32750&lng=78.03250&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING');
   return (
     <div className="container">
       <div className="cards">

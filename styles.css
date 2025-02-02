@@ -1,0 +1,42 @@
+*{
+  margin:0;
+  padding:0;
+}
+header{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  padding: 10px;
+  background: #c2dddb;
+}
+
+header >div{
+  display: flex;
+  align-items: center;
+}
+
+ul{
+  display:flex;
+}
+
+ul>li{
+  text-decoration: none;
+  list-style:none;
+  margin-left: 10px;
+}
+
+input{
+  border-radius: 5px;
+  height: 25px;
+}
+
+.cards{
+  display: flex;
+  flex-wrap:wrap;
+}
+
+.card{
+  height: 200px;
+  width:200px;  
+  margin: 10px 10px;
+}

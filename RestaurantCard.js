@@ -1,12 +1,12 @@
-const RestaurantCard = (props) => {
-  console.log(props);
+const RestaurantCard = ({resName,cuisine }) => {
+  // console.log(props);
   return (
     <div
       className="card"
       style={{ background: '#f0f0f0' }}
     >
-      <h3>{props.resName} </h3>
-      <h6>{props.cuisine}</h6>
+      <h3>{resName} </h3>
+      <h6>{cuisine}</h6>
     </div>
   )
 }

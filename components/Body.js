@@ -1,17 +1,33 @@
-import RestaurantCard from './RestaurantCard';
-// named import
-import {resList} from '../utils/mockData';
+import RestaurantCard from "./RestaurantCard";
+import { useState } from "react";
+import resList from "../utils/mockData";
+
 const Body = () => {
-  // const data = fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=30.32750&lng=78.03250&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING');
+  // Local State Variable - Super powerful variable
+  const [listOfRestaurants, setListOfRestraunt] = useState(resList);
+
   return (
-    <div className="container">
-      <div className="cards">
-        {/* Config driven UI */}
-        {resList.map((res) => <RestaurantCard resName={res.resName}
-          cuisine="Biryani, North Indian" key={res.id} />)}
+    <div className="body">
+      <div className="filter">
+        <button
+          className="filter-btn"
+          onClick={() => {
+            const filteredList = listOfRestaurants.filter(
+              (res) => res.data.avgRating > 4
+            );
+            setListOfRestraunt(filteredList);
+          }}
+        >
+          Top Rated Restaurants
+        </button>
+      </div>
+      <div className="res-container">
+        {listOfRestaurants.map((restaurant) => (
+          <RestaurantCard key={restaurant.data.id} resData={restaurant} />
+        ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Body;

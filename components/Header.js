@@ -1,20 +1,21 @@
+import { LOGO_URL } from "../utils/constants";
+
 const Header = () => {
   return (
-    <header>
-      <div className="icon">
-        <h1>Zomato</h1>
-        <input type="text" placeholder="Search"></input>
+    <div className="header">
+      <div className="logo-container">
+        <img className="logo" src={LOGO_URL} />
       </div>
-      <nav>
+      <div className="nav-items">
         <ul>
           <li>Home</li>
-          <li>About</li>
+          <li>About Us</li>
           <li>Contact Us</li>
           <li>Cart</li>
         </ul>
-      </nav>
-    </header>
-  )
-}
+      </div>
+    </div>
+  );
+};
 
 export default Header;
